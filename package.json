@@ -1,18 +1,25 @@
 {
-  "name": "react-app",
+  "name": "react-base-app",
   "version": "1.0.0",
-  "description": "react application",
+  "description": "React boilerplate",
+  "main": "index.js",
   "scripts": {
-    "build": "browserify ./src/app.jsx -o ./public/app.js -t babelify",
-    "watch": "watchify ./src/app.jsx -o ./public/app.js -t babelify -v"
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "babel-preset-es2015": "6.24.1",
-    "babel-preset-react": "6.24.1",
-    "babelify": "10.0.0",
-    "browserify": "16.2.3",
-    "react": "16.6.3",
-    "react-dom": "16.6.3",
-    "watchify": "3.11.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeslo/minimalist-react.git"
+  },
+  "author": "Matt West",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeslo/minimalist-react/issues"
+  },
+  "homepage": "https://github.com/codeslo/minimalist-react#readme",
+  "devDependencies": {
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
